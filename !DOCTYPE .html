@@ -181,49 +181,6 @@
       color: #d28b2d;
     }
 
-    .order-block {
-      background: #fffdf8;
-      border-radius: 18px;
-      padding: 22px 20px;
-      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .order-text {
-      max-width: 520px;
-    }
-
-    .order-title {
-      font-size: 22px;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .order-subtitle {
-      font-size: 15px;
-      color: #5a5247;
-    }
-
-    .order-form {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .order-form select,
-    .order-form input {
-      padding: 10px 12px;
-      border-radius: 999px;
-      border: 1px solid #d0c4b4;
-      font-size: 14px;
-      min-width: 180px;
-    }
-
     footer {
       border-top: 1px solid rgba(0, 0, 0, 0.06);
       padding: 18px 24px 24px;
@@ -235,38 +192,6 @@
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 10px;
-    }
-
-    @media (max-width: 768px) {
-      .top-bar {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-        margin-bottom: 50px;
-      }
-
-      nav ul {
-        gap: 16px;
-        font-size: 14px;
-      }
-
-      .hero-title {
-        font-size: 30px;
-      }
-
-      header {
-        text-align: left;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .hero-title {
-        font-size: 26px;
-      }
-
-      .header-inner {
-        padding-bottom: 60px;
-      }
     }
   </style>
 </head>
@@ -280,7 +205,6 @@
           <ul>
             <li><a href="#menu">Меню</a></li>
             <li><a href="#about">Про нас</a></li>
-            <li><a href="#order">Замовити</a></li>
             <li><a href="#contacts">Контакти</a></li>
           </ul>
         </nav>
@@ -303,7 +227,7 @@
       <p class="about-text">
         Ми — кафе, яке спеціалізується на корисних та смачних салатах. 
         Використовуємо тільки свіжі інгредієнти й готуємо страви з любов’ю, 
-        щоб ти міг(могла) поєднувати здорове харчування та задоволення від їжі кожного дня.
+        щоб ти міг насолоджуватися здоровим харчуванням щодня.
       </p>
     </section>
 
@@ -311,61 +235,45 @@
       <h2 class="section-title">Наше меню</h2>
 
       <div class="menu-grid">
+
         <article class="dish-card">
-          <h3 class="dish-name">Green Mood</h3>
+          <h3 class="dish-name">Дімента Deluxe</h3>
           <p class="dish-desc">
-            Авокадо, мікс салату, шпинат, сир, фірмовий соус.
+            Листя салату, огірки, моцарела, хамон, оливки, рукола, соус огірково-вершковий.
+            <br>Калорії: 756 · Б(23.1) Ж(70.1) В(11.2)
+            <br>Вага: 315 г
           </p>
-          <div class="dish-price">129 грн</div>
+          <div class="dish-price">240 грн</div>
         </article>
 
         <article class="dish-card">
-          <h3 class="dish-name">Chicken Mix</h3>
+          <h3 class="dish-name">Креветка манго делюкс</h3>
           <p class="dish-desc">
-            Курка, чері, айсберг, лічі, ніжний вершково-часниковий соус.
+            Листя салату, креветки, манго, авокадо, рукола, огірок, сир пармезан,
+            хліб злаковий, соус Азійський (370 салат / 70 соус).
+            <br>Вага: 440 г
           </p>
-          <div class="dish-price">159 грн</div>
+          <div class="dish-price">310 грн</div>
         </article>
 
         <article class="dish-card">
-          <h3 class="dish-name">Fresh Mood</h3>
+          <h3 class="dish-name">Брізе</h3>
           <p class="dish-desc">
-            Цитрусовий мікс, рукола, горіхи, легкий медово-гірчичний соус.
+            Листя салату, болгарський перець свіжий, огірки, тунець, креветки,
+            рукола, соус з ікрою летючої риби.
+            <br>Калорії: 618 · Б(30.7) Ж(51.0) В(11.2)
+            <br>Вага: 330 г
           </p>
-          <div class="dish-price">189 грн</div>
+          <div class="dish-price">290 грн</div>
         </article>
-      </div>
-    </section>
 
-    <section id="order">
-      <div class="order-block">
-        <div class="order-text">
-          <h2 class="order-title">Зробити замовлення</h2>
-          <p class="order-subtitle">
-            Обери улюблений салат і залиш заявку — ми зв’яжемося з тобою для підтвердження замовлення.
-          </p>
-        </div>
-
-        <form class="order-form">
-          <select name="salad">
-            <option value="">Оберіть салат</option>
-            <option value="green">Green Mood</option>
-            <option value="chicken">Chicken Mix</option>
-            <option value="fresh">Fresh Mood</option>
-          </select>
-
-          <input type="text" name="name" placeholder="Ваше ім’я" />
-          <input type="tel" name="phone" placeholder="Телефон" />
-
-          <button type="submit" class="btn">Замовити</button>
-        </form>
       </div>
     </section>
   </main>
 
   <footer id="contacts">
     <div>© MixMood, 2025. Свіжі салати щодня.</div>
-    <div>Телефон: +38 (000) 000-00-00 · Винниця</div>
+    <div>Телефон: +38 (000) 000-00-00 · Вінниця</div>
   </footer>
 
 </body>
